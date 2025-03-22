@@ -30,6 +30,8 @@ git clone https://github.com/ap9155-hue/02.echo-bot.git
 ## Interacting with the bot
 
 Enter text in the emulator.  The text will be echoed back by the bot.
+The bot responds to keywords such as weather, fun fact, introduce yourself, and
+for default it reverses the string supplied.
 
 ## Deploy the bot to Azure
 
