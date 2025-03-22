@@ -74,9 +74,37 @@ async def messages(req: Request) -> Response:
     if "weather" in user_text:
         bot_reply = "I can't check live weather yet, but it looks like a great day to code! ☀️"
     elif "who are you" in user_text or "introduce yourself" in user_text:
-        bot_reply = "I'm a friendly bot here to chat! I can reverse your text, tell fun facts, and more! 🤖"
+        bot_reply = "I'm a friendly bot here to chat! I can reverse your text, tell fun facts, and more!"
     elif "tell me something cool" in user_text or "fun fact" in user_text:
-        bot_reply = "Did you know? Honey never spoils! Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly good. 🍯"
+        bot_reply = "Did you know? Honey never spoils! Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly good."
+    elif "list abilities" in user_text or "what can you do" in user_text:
+        bot_reply = (
+            "I can do a few cool things: \n"
+            "- Reverse your text \n"
+            "- Tell fun facts \n"
+            "- Chat about the weather \n"
+            "- Introduce myself \n"
+            "- Handle basic errors \n"
+            "- Tell jokes \n"
+            "- Perform math calculations \n"
+            "- Greet you \n"
+        )
+    elif "hi" in user_text or "hello" in user_text or "hey" in user_text:
+        bot_reply = "Hello there! How can I assist you today?"
+    elif "joke" in user_text:
+        bot_reply = "Why don't skeletons fight each other? They don't have the guts! 😄"
+    elif "help" in user_text:
+        bot_reply = "I can help with these commands: \n- Reverse text \n- Tell jokes \n- Share fun facts \n- Chat about the weather \n- Perform math calculations \n- Greet you \nJust ask!"
+    elif any(op in user_text for op in ["+", "-", "*", "/"]):
+        try:
+            result = eval(user_text)  # Basic math evaluation (be cautious with this in production)
+            bot_reply = f"The result is: {result}"
+        except Exception:
+            bot_reply = "Oops, I couldn't understand that math. Try again!"
+    elif "goodbye" in user_text or "bye" in user_text:
+        bot_reply = "Goodbye! Have a good one!"
+    elif not user_text or user_text.isspace():
+        bot_reply = "Oops! It looks like you didn't say anything. Try asking me something fun!"
     else:
         # Default: Reverse the text as before
         bot_reply = body["text"][::-1]
@@ -92,6 +120,7 @@ async def messages(req: Request) -> Response:
         return json_response(data=response.body, status=response.status)
 
     return Response(status=HTTPStatus.OK)
+
 
 APP = web.Application(middlewares=[aiohttp_error_middleware])
 APP.router.add_post("/api/messages", messages)

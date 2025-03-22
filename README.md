@@ -27,15 +27,34 @@ git clone https://github.com/ap9155-hue/02.echo-bot.git
 - File -> Open Bot
 - Enter a Bot URL of `http://localhost:3978/api/messages`
 
-## Interacting with the bot
+## Interacting with the bot and its capabilities
 
-Enter text in the emulator.  The text will be echoed back by the bot.
-The bot responds to keywords such as weather, fun fact, introduce yourself, and
-for default it reverses the string supplied.
+Welcome to the Chatbot! This bot is here to engage with you, provide useful responses, and even entertain you with some fun features. Below is a list of the capabilities that this chatbot currently supports.
 
-## Deploy the bot to Azure
+Start a conversation: Simply type something to initiate the interaction.
+Ask questions or request a specific command: Use the predefined phrases (like "tell me something cool", "what can you do?", etc.) or any other input.
+Math calculations: You can also enter mathematical expressions like "5 + 3" or "10 / 2".
+Enjoy the jokes and fun facts: Whenever you're in the mood for something light-hearted, just ask the bot for a joke or fun fact!
 
-To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
+Capabilities
+1. Text Reversal
+The chatbot can reverse any text you send. Just type something, and the bot will send it back in reverse order.
+
+2. List of Abilities
+Get a list of commands you can use with the bot, including all the fun things it can do.
+Example:
+
+You: What can you do?
+Bot:
+I can do a few cool things:
+- Reverse your text
+- Tell fun facts
+- Chat about the weather
+- Introduce myself
+- Handle basic errors
+- Tell jokes
+- Perform math calculations
+- Greet you
 
 ## Further reading
 
