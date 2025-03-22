@@ -8,9 +8,9 @@ This bot has been created using [Bot Framework](https://dev.botframework.com), i
 
 - Clone the repository
 ```bash
-git clone https://github.com/Microsoft/botbuilder-samples.git
+git clone https://github.com/ap9155-hue/02.echo-bot.git
 ```
-- In a terminal, navigate to `botbuilder-samples\samples\python\02.echo-bot` folder
+- In a terminal, navigate to `02.echo-bot` folder
 - Activate your desired virtual environment
 - In the terminal, type `pip install -r requirements.txt`
 - Run your bot with `python app.py`
