@@ -36,18 +36,13 @@ Ask questions or request a specific command: Use the predefined phrases (like "t
 Math calculations: You can also enter mathematical expressions like "5 + 3" or "10 / 2".
 Enjoy the jokes and fun facts: Whenever you're in the mood for something light-hearted, just ask the bot for a joke or fun fact!
 
-Capabilities
-1. Text Reversal
-The chatbot can reverse any text you send. Just type something, and the bot will send it back in reverse order.
-
-2. List of Abilities
+1. List of Abilities
 Get a list of commands you can use with the bot, including all the fun things it can do.
 Example:
 
 You: What can you do?
 Bot:
 I can do a few cool things:
-- Reverse your text
 - Tell fun facts
 - Chat about the weather
 - Introduce myself
